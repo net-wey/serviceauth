@@ -8,6 +8,7 @@ service Auth{
     rpc Register (RegisterRequest) returns (RegisterResponse);
     rpc Login (LoginRequest) returns (LoginResponse);
     rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+    rpc Refresh(RefreshRequest) returns (RefreshResponse);
 }
 
 message RegisterRequest{
@@ -35,4 +36,14 @@ message IsAdminRequest{
 
 message IsAdminResponse{
     bool is_admin = 1;
+}
+
+message RefreshRequest {
+    string refresh_token = 1;
+    int32 app_id = 2;
+}
+
+message RefreshResponse {
+    string access_token = 1;
+    string refresh_token = 2;
 }
