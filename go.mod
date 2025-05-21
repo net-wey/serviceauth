@@ -1,4 +1,4 @@
-module github.com/net-wey/authprotos
+module github.com/net-wey/serviceauth
 
 go 1.24.0
 
