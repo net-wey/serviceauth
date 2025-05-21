@@ -26,9 +26,7 @@ message LoginRequest{
     int32 app_id = 3;
 }
 
-message LoginResponse{
-    string token = 1;
-}
+
 
 message IsAdminRequest{
     int64 user_id = 1;
@@ -44,6 +42,11 @@ message RefreshRequest {
 }
 
 message RefreshResponse {
+    string access_token = 1;
+    string refresh_token = 2;
+}
+
+message LoginResponse {
     string access_token = 1;
     string refresh_token = 2;
 }
