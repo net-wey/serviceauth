@@ -1,4 +1,4 @@
-module github.com/net-wey/serviceauth/v2
+module github.com/net-wey/serviceauth/v3
 
 go 1.24.0
 
